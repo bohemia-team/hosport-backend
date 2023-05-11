@@ -1,0 +1,25 @@
+﻿@using AspnetIdentityRoleBasedTutorial.Controllers;
+@using AspnetIdentityRoleBasedTutorial.Data;
+@model List<ApplicationUser>
+
+<h1>User List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
